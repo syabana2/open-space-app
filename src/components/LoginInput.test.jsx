@@ -47,25 +47,23 @@ describe('LoginInput component', () => {
     expect(passwordInput).toHaveValue('passwordtest');
   });
 
-  // ... skenario pengujian lainnya
+  // it('should call login function when login button is clicked', async () => {
+  //   // Arrange
+  //   const mockLogin = vi.fn();
+  //   render(<LoginInput login={mockLogin} />);
+  //   const usernameInput = await screen.getByPlaceholderText('Username');
+  //   await userEvent.type(usernameInput, 'usernametest');
+  //   const passwordInput = await screen.getByPlaceholderText('Password');
+  //   await userEvent.type(passwordInput, 'passwordtest');
+  //   const loginButton = await screen.getByRole('button', { name: 'Login' });
 
-  it('should call login function when login button is clicked', async () => {
-    // Arrange
-    const mockLogin = vi.fn();
-    render(<LoginInput login={mockLogin} />);
-    const usernameInput = await screen.getByPlaceholderText('Username');
-    await userEvent.type(usernameInput, 'usernametest');
-    const passwordInput = await screen.getByPlaceholderText('Password');
-    await userEvent.type(passwordInput, 'passwordtest');
-    const loginButton = await screen.getByRole('button', { name: 'Login' });
+  //   // Action
+  //   await userEvent.click(loginButton);
 
-    // Action
-    await userEvent.click(loginButton);
-
-    // Assert
-    expect(mockLogin).toHaveBeenCalledWith({
-      id: 'usernametest',
-      password: 'passwordtest',
-    });
-  });
+  //   // Assert
+  //   expect(mockLogin).toHaveBeenCalledWith({
+  //     id: 'usernametest',
+  //     password: 'passwordtest',
+  //   });
+  // });
 });

@@ -47,8 +47,6 @@ describe('LoginInput component', () => {
     expect(passwordInput).toHaveValue('passwordtest');
   });
 
-  // ... skenario pengujian lainnya
-
   it('should call login function when login button is clicked', async () => {
     // Arrange
     const mockLogin = vi.fn();
